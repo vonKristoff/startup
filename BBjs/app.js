@@ -1,9 +1,9 @@
-define(['backbone','performer','router','sortable'], function (Backbone,Performer,Router) {
+define(['backbone','performer','router'], function (Backbone,Performer,Router) {
 
 	var App = {};
 
 	App.AppView = Backbone.View.extend({
-		el:'.master',
+		el:'#content',
 		initialize:function(){
 
 			Global.Vent.on('start',this.start,this);
@@ -14,13 +14,13 @@ define(['backbone','performer','router','sortable'], function (Backbone,Performe
 
 			var self = this; // !mportant
 
-			this.performers = new Performer.Collection();
-			this.performers.fetch().done(function(result){
+			// this.performers = new Performer.Collection();
+			// this.performers.fetch().done(function(result){
 				
-				self.scheduleCollectionView = new Performer.Views.Collection({ collection: self.performers })
+			// 	self.scheduleCollectionView = new Performer.Views.Collection({ collection: self.performers })
 				
-				self.render()
-			}) // <-- put in this, rather than use self
+			// 	self.render()
+			// }) 
 		},
 		render:function(){
 			this.$el.append( this.scheduleCollectionView.render().el );	

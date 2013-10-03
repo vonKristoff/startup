@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 			},
 			js:{
 				files: ['js/*.js','*.php'],
-				tasks: ['copy','uglify'],
+				// tasks: ['copy','uglify'],
 				options:{ livereload: true }
 			}
 		},

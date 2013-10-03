@@ -6,9 +6,7 @@ require.config({
         underscore:'../bower_components/underscore/underscore',
         Handlebars:'../bower_components/handlebars/handlebars',
         storage:'../bower_components/backbone.localStorage/backbone.localStorage',
-        text:'../bower_components/requirejs-text/text',
-        sortable:'../lib/sortable',
-        ui:'../lib/jquery-ui'
+        text:'../bower_components/requirejs-text/text' 
     },
     shim: {
         backbone:{
@@ -27,12 +25,12 @@ require.config({
     }
 });
 
-require(['app','ui'], function (App) {
+require(['app'], function (App) {
 
     window.Global = {
         Vent:_.extend({},Backbone.Events)
     };
 
-    new App.AppView();
+    var ApplicationName = new App.AppView();
     
 })  
