@@ -8,6 +8,7 @@
     "requirejs":"*",
     "underscore":"*",
     "handlebars":"*",
-    "requirejs-text":"*"
+    "requirejs-text":"*",
+    "backbone.marionette":"*"
   }
 }
